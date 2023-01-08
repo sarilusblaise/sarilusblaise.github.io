@@ -269,18 +269,72 @@ nav {
 }
 /*====================================*/
 
+/*********************************/
 header {
     min-height: 100vh;
-    background: linear-gradient(rgba(31, 82, 82, 0.5), rgba(0, 0, 0, 0.7)),
-        url(./hero-bcg.jpeg) center/cover no-repeat;
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+        url(/images/bg-home.jpg) center/cover no-repeat;
 }
 
 .banner {
-    min-height: 100vh;
     display: grid;
     place-items: center;
     text-align: center;
 }
+
+#welcome-section{
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    color: var(--clr-white);
+    text-transform: uppercase;
+}
+
+.container p {
+    color: var(--clr-white);
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+}
+.container .social-icons{
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+/* profile image */
+.banner .profile-img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.banner img{
+    object-fit: cover;
+    height: 100%;
+    border-radius: 50%;
+}
+/*=========================*/
+
+
+@media screen and (min-width: 768px) {
+    .container p {
+        max-width: 40rem;
+    }
+}
+
+
+
+
+/*******************************/
 
 .btn-container .hiddeNav-btn {
     display: none;
@@ -338,3 +392,57 @@ header {
 .fixed-nav .links a:hover {
     color: var(--clr-secondary);
 }
+
+/* footer */
+footer {
+    background: var(--clr-grey-1);
+    padding: 5rem 1rem;
+}
+
+footer p {
+    color: var(--clr-white);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0;
+}
+
+/*top link*/
+
+.top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: var(--clr-secondary);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    color: var(--clr-white);
+    animation: bounce 2s ease-in-out infinite;
+    /*visibility: hidden;
+    z-index: -100;*/
+}
+
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
