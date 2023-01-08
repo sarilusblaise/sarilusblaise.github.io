@@ -138,6 +138,10 @@ p {
     }
 }
 
+img{
+    width: 100%;
+}
+
 
 /* global classes */ 
 .btn {
@@ -178,14 +182,92 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 1rem;
 }
 
 nav {
     background: var(--clr-white);
-    padding: 1rem 1.5rem;
+    box-shadow: var(--light-shadow); 
+}
+/*.links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}*/
+
+.show-links {
+    height: 10rem;
+}
+.logo {
+    height: 40px;
 }
 
+.links a {
+    color: var(--clr-grey-3);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    color: var(--clr-primary-5);
+    padding-left: 1.5rem;
+}
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    margin: 0 1rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+    font-size: 2rem;
+}
+
+.social-icons a:hover {
+    color: var(--clr-primary-7);
+}
+
+/*nav media query for tablet and laptop*/
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggleBtn {
+        display: none;
+    }
+
+    .links {
+        height: auto !important;
+        display: flex;
+    }
+
+    .links a {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+        display: flex;
+
+    }
+}
+/*====================================*/
 
 header {
     min-height: 100vh;
@@ -200,12 +282,6 @@ header {
     text-align: center;
 }
 
-.links-container {
-    height: 0px;
-    transition: var(--transition);
-    overflow: hidden;
-}
-
 .btn-container .hiddeNav-btn {
     display: none;
 }
@@ -218,21 +294,6 @@ header {
     display: block;
 }
 
-
-.links a {
-    color: var(--clr-grey-3);
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
-    display: block;
-    transition: var(--transition);
-    font-weight: bold;
-    padding: 0.75rem 0;
-}
-
-.links a:hover {
-    color: var(--clr-primary-3);
-}
 
 .logo {
     font-size: 2rem;
