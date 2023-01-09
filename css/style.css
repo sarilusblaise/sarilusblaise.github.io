@@ -74,6 +74,7 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
 body.dark-mode {
@@ -111,7 +112,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 h3{
     font-size: 1rem;
@@ -328,11 +329,13 @@ header {
      opacity: 0.8;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
     .container h2 {
         max-width: 40rem;
+        font-size: 1.5rem;
     }
 }
 .container .social-icons{
@@ -350,7 +353,6 @@ header {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    background-color: blue;
     margin-bottom: 1rem;
 }
 
@@ -397,6 +399,11 @@ header {
     padding: 0.3rem;
 }
 
+.about-stack p{
+    font-style: italic;
+    color: var(--clr-grey-1);
+}
+
 @media screen and (min-width:992px){
     .about{
         display: grid;
@@ -407,6 +414,68 @@ header {
 }
 
 /*===================================================*/
+
+
+/*project*/
+
+.projects {
+    padding: 4rem;
+    background-color: #1d2a35;
+        
+    
+}
+
+.projects .btn-container {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tab-btn:nth-child(1) {
+    border-top-left-radius: var(--radius);
+}
+
+.tab-btn:nth-child(3) {
+    border-top-right-radius: var(--radius);
+}
+
+.tab-btn {
+    padding: 1rem 0;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    display: block;
+    background: var(--clr-grey-9);
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: var(--spacing);
+}
+
+.tab-btn:hover:not(.active) {
+    background: var(--clr-primary-10);
+    color: var(--clr-primary-5);
+}
+
+.projects-content {
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    background-color: var(--clr-white);
+    
+}
+
+/* hide content */
+.content {
+    display: none;
+}
+
+.tab-btn.active {
+    background: var(--clr-white);
+}
+
+.content.active {
+    display: block;
+}
 
 
 /*******************************/
