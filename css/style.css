@@ -421,14 +421,37 @@ header {
 .projects {
     padding: 4rem;
     background-color: #1d2a35;
-        
+    min-height: 100vh;
     
 }
 
+
+@media screen and (min-width:768px){
+    .projects{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:0 2rem;
+        place-content: center;
+        max-width: 100%;
+    }
+
+    .project-item{
+        margin-bottom: 0;
+    }
+}
+
+.project-item:not(:last-child){
+    display: grid;
+    grid-template-rows:auto 1fr ;
+    margin-top: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
 .projects .btn-container {
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
 }
 
 .tab-btn:nth-child(1) {
