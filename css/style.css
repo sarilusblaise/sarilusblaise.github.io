@@ -287,7 +287,7 @@ nav {
 header {
     min-height: 100vh;
     background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
-        url(/images/bg-home.jpeg) center/cover no-repeat;
+        url(../images/bg-home.jpeg) center/cover no-repeat;
 }
 
 .banner {
@@ -376,11 +376,13 @@ header {
     text-align: justify;
 }
 
-.about-bio h2, .about-stack > h2{
+.about-bio h2, .about-stack > h2 , #projects h2{
     border-bottom: 2px solid var(--clr-black);
     display: inline-block;
     margin-bottom: 1rem;
 }
+
+
 
 .stack-container{
     display: flex;
@@ -419,12 +421,20 @@ header {
 /*project*/
 
 .projects {
-    padding: 2rem;
-    background-color: #1d2a35;
     min-height: 100vh;
     
 }
 
+#projects{
+    background-color: #1d2a35;
+    padding: 2rem;
+}
+
+#projects h2 {
+    color: var(--clr-white);
+    border-bottom: 2px solid var(--clr-grey-7);
+    margin-bottom: 1rem;
+}
 
 @media screen and (min-width:768px){
     .projects{
