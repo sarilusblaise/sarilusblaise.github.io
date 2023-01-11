@@ -422,14 +422,10 @@ header {
 
 /*project*/
 
-.projects {
-    min-height: 100vh;
-    
-}
-
 #projects{
-    background-color: #1d2a35;
+    background-color: var(--clr-grey-3) ;
     padding: 2rem;
+    min-height: 100vh;
 }
 
 #projects h1{
@@ -449,6 +445,7 @@ header {
         gap:0 2rem;
         place-content: center;
         max-width: 100%;
+        
     }
 
     .project-item{
@@ -470,13 +467,6 @@ header {
     place-content: center;
 }
 
-.tab-btn:nth-child(1) {
-    /*border-top-left-radius: var(--radius);*/
-}
-
-.tab-btn:nth-child(3) {
-    /*border-top-right-radius: var(--radius);*/
-}
 
 .tab-btn {
     padding: 1rem 0;
@@ -514,6 +504,7 @@ header {
 /* hide content */
 .content {
     display: none;
+    
 }
 
 .tab-btn.active {
@@ -523,6 +514,68 @@ header {
 
 .content.active {
     display: block;
+}
+
+/* contact section */
+.contact-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.contact{
+    padding: 1rem;
+    background: rgba(0, 0, 0,0.8);
+    color: var(--clr-grey-7);
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact form{
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: var(--light-shadow);
+    border: 1px solid rgba(225, 225, 225, 0.1);
+    border-radius: 0.3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 100%;
+}
+@media screen and (min-width:768px){
+    .contact form {
+        width: 70%;
+    }
+}
+
+.form-control{
+    background-color: transparent;
+    border: 2px solid rgba(225, 225, 225, 0.1) ;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    color:var(--clr-white);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-control:focus{
+    border: 2px solid rgba(225, 225, 225, 0.4);
+}
+
+.btn-submit{
+    width: 12rem;
+    color: var(--clr-white);
+        border: 2px solid rgba(225, 225, 225, 0.1);
+        padding: 1rem 0.2rem;
+        text-transform: capitalize;
+        border-radius: 0.2rem;
+        background-color: var(--clr-grey-1);
+}
+
+.btn-submit:hover{
+    background-color: transparent;
 }
 
 
@@ -587,8 +640,9 @@ header {
 
 /* footer */
 footer {
-    background: var(--clr-grey-1);
+    background: var(--clr-black);
     padding: 5rem 1rem;
+    opacity: 0.9;
 }
 
 footer p {
