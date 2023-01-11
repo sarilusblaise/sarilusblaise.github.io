@@ -518,14 +518,26 @@ header {
 
 /* contact section */
 .contact-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     row-gap: 2rem;
+    place-content: center;
+    column-gap:0;
+}
+
+@media screen and (min-width:800px){
+.contact-body{
+    grid-template-columns: 25% 60%;
+    column-gap: 2rem;
+    place-content: center;
+    row-gap: 0;
+}
+.contact-options{
+    order: -1;
+}
 }
 .contact{
-    padding: 1rem;
+    padding: 2rem;
     background: rgba(0, 0, 0,0.8);
     color: var(--clr-grey-7);
     width: 100%;
@@ -541,12 +553,6 @@ header {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    width: 100%;
-}
-@media screen and (min-width:768px){
-    .contact form {
-        width: 70%;
-    }
 }
 
 .form-control{
