@@ -96,7 +96,7 @@ a {
 }
 
 h1,
-h2,h3,h4 {
+h2,h3 {
     letter-spacing: 0.1rem;
     text-transform: capitalize;
     color: var(--header-color);
@@ -117,9 +117,6 @@ h2 {
 h3{
     font-size: 1rem;
 }
-h4{
-    font-size: 0.8rem;
-}
 
 
 p {
@@ -137,19 +134,15 @@ p {
     }
 
     h3{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
-    h4{
-        font-size:1rem
-    }
-
 
     body {
         font-size: 1rem;
     }
 
     h1,
-    h2,h3,h4 {
+    h2 {
         line-height: 1;
     }
 }
@@ -493,16 +486,6 @@ header {
         font-size: 1rem;
     }
 }
-        @media screen and (min-width:768px) {
-            .tab-btn {
-                font-size: 0.7rem;
-            }
-}
- @media screen and (min-width:992px) {
-     .tab-btn {
-         font-size: 1rem;
-     }
- }
 
 
 .tab-btn:hover:not(.active) {
@@ -542,10 +525,9 @@ header {
     column-gap:0;
 }
 
-
-@media screen and (min-width:992px){
+@media screen and (min-width:800px){
 .contact-body{
-    grid-template-columns: 30% 60%;
+    grid-template-columns: 25% 60%;
     column-gap: 2rem;
     place-content: center;
     row-gap: 0;
@@ -560,10 +542,6 @@ header {
     color: var(--clr-grey-7);
     width: 100%;
     max-width: 100%;
-}
-
-.contact h1{
-    color: var(--clr-white);
 }
 
 .contact form{
@@ -605,59 +583,6 @@ header {
 .btn-submit:hover{
     background-color: transparent;
 }
-
-.contact-options{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.contact-option:first-child h4{
-    text-transform: lowercase;
-}
-
-@media screen and (min-width:992px){
-    .contact-options {
-            flex-direction: column;
-        }
-}
-
-.contact-option{
-    display: flex;
-    flex-direction: column;
-    color: var(--clr-white);
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.contact-option h3, .contact-option h4{
-    margin-bottom: 0;
-    color:var(--clr-white);
-}
-
-.contact-option i{
-    font-size: 3rem;
-    color: var(--clr-grey-7);
-
-}
-.btn-option{
-    color: var(--clr-white);
-    font-size: 0.875rem;
-    color: var(--clr-grey-7);
-    text-transform: uppercase;
-}
-
-.btn-option:hover{
-    width: 10rem;
-    color: var(--clr-white);
-        border: 2px solid rgba(225, 225, 225, 0.1);
-        padding: 1rem 0.2rem;
-        border-radius: 0.2rem;
-        background-color: var(--clr-grey-1);
-        text-align: center;
-}
-
 
 
 /*******************************/
@@ -724,10 +649,6 @@ footer {
     background: var(--clr-black);
     padding: 5rem 1rem;
     opacity: 0.9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
 }
 
 footer p {
@@ -735,11 +656,8 @@ footer p {
     text-align: center;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    font-size: 0.8rem;
+    margin-bottom: 0;
 }
-
-
-
 
 /*top link*/
 
