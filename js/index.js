@@ -1,28 +1,49 @@
-// !! IMPORTANT README:
+// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
+// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
+// slice extracts a section of a string without modifying original string
+//offsetTop - A Number, representing the top position of the element, in pixels
 
-// You may add additional external JS and CSS as needed to complete the project, however the current external resource MUST remain in place for the tests to work. BABEL must also be left in place. 
+const DomElement = (selector) => {
+	try {
+		if (document.querySelector(selector))
+			return document.querySelector(selector);
+		throw new Error(`${selector} does'nt exist or it's not a valid selector`);
+	} catch (err) {
+		console.log(err);
+	}
+};
 
-/***********
-INSTRUCTIONS:
-  - Select the project you would 
-    like to complete from the dropdown 
-    menu.
-  - Click the "RUN TESTS" button to
-    run the tests against the blank 
-    pen.
-  - Click the "TESTS" button to see 
-    the individual test cases. 
-    (should all be failing at first)
-  - Start coding! As you fulfill each
-    test case, you will see them go   
-    from red to green.
-  - As you start to build out your 
-    project, when tests are failing, 
-    you should get helpful errors 
-    along the way!
-    ************/
+//**************copyright date***********//
+const date = DomElement("#copyright-date");
+date.innerHTML = new Date().getFullYear();
 
-// PLEASE NOTE: Adding global style rules using the * selector, or by adding rules to body {..} or html {..}, or to all elements within body or html, i.e. h1 {..}, has the potential to pollute the test suite's CSS. Try adding: * { color: red }, for a quick example!
+// ********** close links ************
+const navToggle = DomElement(".nav-toggleBtn");
+const linksContainer = DomElement(".links");
 
-// Once you have read the above messages, you can delete all comments. 
-"use strict";
+navToggle.addEventListener("click", function () {
+	linksContainer.classList.toggle("show-links");
+	// console.log(linksContainer.getBoundingClientRect());
+});
+
+// ********** fixed navbar ************
+
+const navbar = DomElement("#navbar");
+const topLink = DomElement(".top-link");
+
+window.addEventListener("scroll", function () {
+	const scrollHeight = window.pageYOffset;
+	const navHeight = navbar.getBoundingClientRect().height;
+	if (scrollHeight > navHeight) {
+		navbar.classList.add("fixed-nav");
+	} else {
+		navbar.classList.remove("fixed-nav");
+	}
+	// setup back to top link
+
+	if (scrollHeight > 500) {
+		topLink.classList.add("show-link");
+	} else {
+		topLink.classList.remove("show-link");
+	}
+});

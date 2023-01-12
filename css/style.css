@@ -262,16 +262,13 @@ nav {
     color: var(--clr-grey-1);
 }
 
-.fixed-nav .links a:hover {
-    color: var(--clr-secondary);
-}
 .links {
     height: 0;
     overflow: hidden;
     transition: var(--transition);
 }
 .show-links {
-    height: 10rem;
+    height: 200px;
 }
 
 .links a {
@@ -365,6 +362,7 @@ header {
 
 #welcome-section{
     height: 100vh;
+    min-height: 100vh;
 }
 
 .container{
@@ -390,10 +388,9 @@ header {
     margin: 0 auto;
     max-width: 15rem;
     margin-bottom: 2rem;
-    background: var(--clr-grey-1);
+    background: hsl(209, 61%, 16%,0.8);
      padding: 0.5rem;
      border-radius: 1rem;
-     opacity: 0.8;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-size: 1rem;
@@ -765,8 +762,8 @@ footer p {
     border-radius: var(--radius);
     color: var(--clr-white);
     animation: bounce 2s ease-in-out infinite;
-    /*visibility: hidden;
-    z-index: -100;*/
+    visibility: hidden;
+    z-index: -100;
 }
 
 
