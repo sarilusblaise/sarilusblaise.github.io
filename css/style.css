@@ -197,30 +197,81 @@ p{
     color: var(--clr-secondary);
 }
 
+.btn-container .hiddeNav-btn {
+    display: none;
+}
+
+.display-btn .showNav-btn {
+    display: none;
+}
+
+.display-btn .hiddeNav-btn {
+    display: block;
+}
+
+
+/* logo*/
+
+.logo {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: "Sofia", sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    color:var(--clr-green-light)
+}
+
+
+/*navbar*/
+.nav-toggleBtn {
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav-toggleBtn:hover {
+    color: var(--clr-secondary);
+}
+
 
 
 .nav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
 
 nav {
     background: var(--clr-white);
-    box-shadow: var(--light-shadow); 
+    padding: 1rem 1.5rem;
 }
-/*.links {
+/********* fixed nav *********/
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+.fixed-nav .links a {
+    color: var(--clr-grey-1);
+}
+
+.fixed-nav .links a:hover {
+    color: var(--clr-secondary);
+}
+.links {
     height: 0;
     overflow: hidden;
     transition: var(--transition);
-}*/
-
+}
 .show-links {
     height: 10rem;
-}
-.logo {
-    height: 40px;
 }
 
 .links a {
@@ -228,15 +279,16 @@ nav {
     font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    display: block;
-    padding: 0.5rem 1rem;
+    display: inline-block;
+    padding: 0.75rem 0;
     transition: var(--transition);
+    border-bottom: 4px solid transparent;
 }
 
-.links a:hover {
-    color: var(--clr-primary-5);
-    padding-left: 1.5rem;
-}
+ .links a:hover {
+     border-bottom-color: var(--clr-primary-6);
+ }
+
 .social-icons {
     display: flex;
 }
@@ -253,14 +305,18 @@ nav {
 }
 
 /*nav media query for tablet and laptop*/
+
 @media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+
     .nav-center {
+        width: 90vw;
         max-width: 1170px;
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1rem;
     }
 
     .nav-header {
@@ -273,20 +329,24 @@ nav {
 
     .links {
         height: auto !important;
+    }
+
+    .links {
         display: flex;
     }
 
     .links a {
-        padding: 0;
-        margin: 0 0.5rem;
-    }
-
-    .links a:hover {
-        padding: 0;
         background: transparent;
-        display: flex;
-
+        color: var(--clr-white);
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        letter-spacing: var(--spacing);
+        display: block;
+        transition: var(--transition);
+        margin: 0 1rem;
+        font-weight: bold;
     }
+       
 }
 /*====================================*/
 
@@ -667,62 +727,6 @@ header {
 
 /*******************************/
 
-.btn-container .hiddeNav-btn {
-    display: none;
-}
-
-.display-btn .showNav-btn {
-    display: none;
-}
-
-.display-btn .hiddeNav-btn {
-    display: block;
-}
-
-
-.logo {
-    font-size: 2rem;
-    text-transform: capitalize;
-    font-family: "Sofia", sans-serif;
-    font-weight: bold;
-    font-style: oblique;
-    color: var(--clr-primary-10);
-}
-
-.logo span:nth-of-type(2) {
-    color: hsla(157, 78%, 70%, 0.849)
-}
-
-.nav-toggleBtn {
-    font-size: 1.5rem;
-    color: var(--clr-grey-1);
-    background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
-    cursor: pointer;
-}
-
-.nav-toggleBtn:hover {
-    color: var(--clr-secondary);
-}
-
-/********* fixed nav *********/
-.fixed-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--clr-white);
-    box-shadow: var(--light-shadow);
-}
-
-.fixed-nav .links a {
-    color: var(--clr-grey-1);
-}
-
-.fixed-nav .links a:hover {
-    color: var(--clr-secondary);
-}
 
 /* footer */
 footer {
