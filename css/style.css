@@ -353,6 +353,11 @@ header {
 
 .social-link i{
     color: var(--clr-white);
+    transition: var(--transition);
+}
+
+.social-link i:hover{
+    color:var(--clr-grey-7);
 }
 
 /* profile image */
@@ -737,6 +742,7 @@ footer p {
     letter-spacing: var(--spacing);
     font-size: 0.8rem;
 }
+
 
 
 
