@@ -353,6 +353,11 @@ header {
 
 .social-link i{
     color: var(--clr-white);
+    transition:var(--transition);
+}
+
+.social-link i:hover{
+    color: var(--clr-grey-17);
 }
 
 /* profile image */
