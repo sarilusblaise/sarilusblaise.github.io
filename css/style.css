@@ -406,7 +406,7 @@ header {
 
 .stack-container li{
     font-size: 4rem;
-    color: var(--clr-grey-4);
+    color: var(--clr-grey-1);
 }
 
 .about-stack div h3{
@@ -435,7 +435,7 @@ header {
 /*project*/
 
 #projects{
-    background-color: var(--clr-grey-3) ;
+    background-color: var(--clr-grey-1) ;
     padding: 2rem;
     min-height: 100vh;
 }
