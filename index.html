@@ -8,6 +8,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/3dfa31af4e.js" crossorigin="anonymous"></script>
+  <!--====================emaijs setup==============-->
+  <!--First, we load our EmailJS SDK-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!--Second, we initialize the SDK with our public key-->
+  <script type="text/javascript">
+    ( function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init( 'CB2Y0Gb-IKb441cgR' );
+    } )();
+  </script>
+
+  <!-- we submit our contact form and send it through EmailJS, using our Contact Service and Contact Form-->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById( 'contact-form' ).addEventListener( 'submit', function ( event ) {
+        event.preventDefault();
+        // id form te contact service
+        emailjs.sendForm( 'service_znqyuzj', 'template_m08buzo', '#form', 'CB2Y0Gb-IKb441cgR' )
+          .then( function () {
+            alert( 'SUCCESS!' );
+          }, function ( error ) {
+            alert( 'FAILED...', error );
+          } );
+      } );
+    }
+  </script>
 </head>
 
 <body>
@@ -373,7 +400,7 @@
     <section id="contact" class="contact">
       <h1>Contact me</h1>
       <article class="contact-body">
-        <form action="" method="post">
+        <form action="" method="post" id="form">
           <input type="text" name="name" id="name" class="form-control" placeholder="Your Name *" required>
           <input type="email" name="email" id="email" class="form-control" placeholder="Your Email *" required>
           <textarea name="massage" id="message" rows="7" placeholder="Your Message *" required
