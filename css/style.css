@@ -268,7 +268,7 @@ nav {
     transition: var(--transition);
 }
 .show-links {
-    height: 200px;
+    height: 210px;
 }
 
 .links a {
@@ -507,7 +507,7 @@ header {
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:800px){
     .projects{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -615,6 +615,10 @@ header {
 .contact-options{
     order: -1;
 }
+
+.btn-submit{
+    width: 12rem;
+}
 }
 .contact{
     padding: 2rem;
@@ -659,13 +663,13 @@ header {
 }
 
 .btn-submit{
-    width: 12rem;
     color: var(--clr-white);
         border: 2px solid rgba(225, 225, 225, 0.1);
         padding: 1rem 0.2rem;
-        text-transform: capitalize;
+        text-transform: uppercase;
         border-radius: 0.2rem;
         background-color: var(--clr-grey-1);
+        
 }
 
 .btn-submit:hover{
