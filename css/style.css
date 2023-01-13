@@ -218,7 +218,7 @@ p{
     font-family: "Sofia", sans-serif;
     font-weight: bold;
     font-style: oblique;
-    color:var(--clr-green-light)
+    color:var(--clr-secondary);
 }
 
 
@@ -619,13 +619,17 @@ header {
 .contact{
     padding: 2rem;
     background: rgba(0, 0, 0,0.8);
-    color: var(--clr-grey-7);
+    color: var(--clr-white);
     width: 100%;
     max-width: 100%;
 }
 
 .contact h1{
     color: var(--clr-white);
+}
+
+ h1 span{
+    color: var(--clr-secondary);
 }
 
 .contact form{
@@ -700,24 +704,21 @@ header {
 
 .contact-option i{
     font-size: 3rem;
-    color: var(--clr-grey-7);
+    color: var(--clr-secondary);
 
 }
 .btn-option{
     color: var(--clr-white);
     font-size: 0.875rem;
-    color: var(--clr-grey-7);
+    color: var(--clr-secondary);
     text-transform: uppercase;
+    transition: var(--transition);
+    cursor: pointer;
 }
 
 .btn-option:hover{
-    width: 10rem;
-    color: var(--clr-white);
-        border: 2px solid rgba(225, 225, 225, 0.1);
-        padding: 1rem 0.2rem;
-        border-radius: 0.2rem;
-        background-color: var(--clr-grey-1);
-        text-align: center;
+    text-decoration: underline;
+    color: hsla(182, 63%, 54%,0.7);
 }
 
 
