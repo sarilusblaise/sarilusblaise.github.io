@@ -580,6 +580,17 @@ header {
     
 }
 
+.website-links{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.website-link{
+    color: var(--clr-primary-5)!important;
+}
+
+
 /* hide content */
 .content {
     display: none;

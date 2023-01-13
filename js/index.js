@@ -79,3 +79,27 @@ scrollLinks.forEach((link) => {
 		linksContainer.classList.remove("show-links");
 	});
 });
+
+// project tabs
+const projectItems = document.querySelectorAll(".project-item");
+//const btns = document.querySelectorAll(".tab-btn");
+projectItems.forEach((projectItem) => {
+	projectItem.addEventListener("click", function (e) {
+		const contents = e.currentTarget.querySelectorAll(".content");
+		const btns = e.currentTarget.querySelectorAll(".tab-btn");
+		const id = e.target.dataset.id;
+		if (id) {
+			// remove selected from other buttons
+			btns.forEach(function (btn) {
+				btn.classList.remove("active");
+			});
+			e.target.classList.add("active");
+			// hide other articles
+			contents.forEach(function (content) {
+				content.classList.remove("active");
+			});
+			const element = document.getElementById(id);
+			element.classList.add("active");
+		}
+	});
+});
