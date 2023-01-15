@@ -346,12 +346,11 @@ header {
 
 .banner {
     display: grid;
-    place-items: center;
+    place-content: center;
     text-align: center;
 }
 
 #welcome-section{
-    height: 100vh;
     min-height: 100vh;
 }
 
@@ -408,12 +407,10 @@ header {
 }
 
 /* profile image */
-#welcome-section{
-    height: 100vh;
-}
+
 .banner .profile-img{
     width: 10rem;
-    min-height: 10rem;
+    height: 10rem;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
