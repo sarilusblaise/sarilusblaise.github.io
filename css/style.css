@@ -197,17 +197,7 @@ p{
     color: var(--clr-secondary);
 }
 
-.btn-container .hiddeNav-btn {
-    display: none;
-}
 
-.display-btn .showNav-btn {
-    display: none;
-}
-
-.display-btn .hiddeNav-btn {
-    display: block;
-}
 
 
 /* logo*/
@@ -418,9 +408,12 @@ header {
 }
 
 /* profile image */
+#welcome-section{
+    height: 100vh;
+}
 .banner .profile-img{
     width: 10rem;
-    height: 10rem;
+    min-height: 10rem;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
@@ -549,6 +542,13 @@ header {
     letter-spacing: var(--spacing);
     text-align: center;
 }
+.tab-btn:nth-child(1) {
+    border-top-left-radius: 0.2em;
+}
+
+.tab-btn:nth-child(3) {
+    border-top-right-radius: 0.2rem;
+}
 
 @media screen and (min-width:576px){
     .tab-btn{
@@ -573,8 +573,8 @@ header {
 }
 
 .projects-content {
-    /*border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);*/
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
     padding: 2rem 1.5rem;
     background-color: var(--clr-white);
     
