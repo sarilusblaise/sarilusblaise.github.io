@@ -510,6 +510,9 @@ header {
     .project-item{
         margin-bottom: 0;
     }
+        
+
+
 }
 
 .project-item:not(:last-child){
@@ -531,7 +534,7 @@ header {
     padding: 1rem 0;
     border: none;
     text-transform: capitalize;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     display: block;
     background: var(--clr-grey-9);
     cursor: pointer;
@@ -552,9 +555,9 @@ header {
         font-size: 1rem;
     }
 }
-        @media screen and (min-width:768px) {
+        @media screen and (min-width:800px) {
             .tab-btn {
-                font-size: 0.7rem;
+                font-size: 0.8rem;
             }
 }
  @media screen and (min-width:992px) {
